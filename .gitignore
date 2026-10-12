@@ -1,0 +1,9 @@
+﻿__pycache__/
+*.py[cod]
+venv/
+.venv/
+event_booking.db
+event_booking.db-journal
+.env
+.env.*
+.vscode/

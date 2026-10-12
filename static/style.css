@@ -1,0 +1,118 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6fb;
+    color: #252541;
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(135deg, #29245c, #5146a5);
+    color: white;
+    text-align: center;
+    padding: 32px 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 30px;
+}
+
+header p {
+    margin-bottom: 0;
+    color: #e8e6ff;
+}
+
+main {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+section {
+    background: white;
+    padding: 24px;
+    margin-bottom: 24px;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+
+h2 {
+    margin-top: 0;
+    color: #29245c;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d4d5e2;
+    border-radius: 7px;
+    font-size: 15px;
+    background: white;
+}
+
+input:focus,
+select:focus {
+    outline: 2px solid #a9a0f5;
+    border-color: #5146a5;
+}
+
+label {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+button {
+    padding: 12px 18px;
+    background: #5146a5;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #393078;
+}
+
+hr {
+    display: none;
+}
+
+#eventMessage,
+#eventDetails,
+#bookingMessage,
+#bookingDetails,
+#eventInfo {
+    margin-top: 16px;
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 600px) {
+    main {
+        margin: 12px auto;
+        padding: 12px;
+    }
+
+    section {
+        padding: 18px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+}

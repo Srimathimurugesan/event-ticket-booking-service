@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Ticket Booking Service</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header>
+        <h1>Event Ticket Booking Service</h1>
+        <p>Discover events and book your tickets</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Create an Event</h2>
+            <form id="eventForm">
+                <input id="eventName" placeholder="Event name" required>
+                <input id="venue" placeholder="Venue" required>
+
+                <select id="category" required>
+                    <option value="">Select category</option>
+                    <option value="concert">Concert</option>
+                    <option value="sports">Sports</option>
+                    <option value="tech_meetup">Tech Meetup</option>
+                    <option value="theater">Theater</option>
+                </select>
+
+                <label for="eventDate">Event date</label>
+                <input id="eventDate" type="date" required>
+
+                <input id="totalSeats" type="number"
+                    placeholder="Total seats" min="10" required>
+
+                <input id="basePrice" type="number"
+                    placeholder="Base price per seat" min="0.01"
+                    step="0.01" required>
+
+                <button type="submit">Create Event</button>
+            </form>
+            <p id="eventMessage"></p>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>Find an Event</h2>
+            <form id="searchEventForm">
+                <input id="searchEventId" type="number"
+                    placeholder="Enter event ID" min="1" required>
+                <button type="submit">Find Event</button>
+            </form>
+            <div id="eventDetails"></div>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>Book Tickets</h2>
+            <form id="bookingForm">
+                <input id="bookingEventId" type="number"
+                    placeholder="Event ID" min="1" required>
+
+                <input id="customerName" placeholder="Customer name" required>
+
+                <input id="customerEmail" type="email"
+                    placeholder="Customer email" required>
+
+                <input id="seatNumbers"
+                    placeholder="Seat numbers, e.g. 1,2,3" required>
+
+                <button type="submit">Book Tickets</button>
+            </form>
+            <div id="bookingMessage"></div>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>Find a Booking</h2>
+            <form id="searchBookingForm">
+                <input id="searchBookingId" type="number"
+                    placeholder="Enter booking ID" min="1" required>
+                <button type="submit">Find Booking</button>
+            </form>
+            <div id="bookingDetails"></div>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>Event Information</h2>
+            <form id="eventInfoForm">
+                <input id="infoEventId" type="number"
+                    placeholder="Enter event ID" min="1" required>
+
+                <select id="infoType">
+                    <option value="seats">Seat Availability</option>
+                    <option value="summary">Event Summary</option>
+                    <option value="bookings">Booking History</option>
+                </select>
+
+                <button type="submit">View Information</button>
+            </form>
+            <div id="eventInfo"></div>
+        </section>
+    </main>
+    <script src="/static/script.js"></script>
+</body>
+</html>
